@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <h1 class="display-3">Welcome!</h1>
+    <p class="lead">I screech here.</p>
+    <hr class="my-4">
+    <p>Screech with me.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/compose" role="button">Learn more</a>
+    </p>
+  </div>
+
+<div id="post-container">
+    <div class="blog-list list group">
+        <div class="blog-post" ng-repeat="post in posts">
+            <h3>{{ post.title }}</h3>
+            <h4>By {{ post.authorfirstname }} {{ post.authorlastname }}</h4>
+            <p>{{ post.categoryname }}</p>
+            <p>{{ post.createdAt | date:'short' }}</p>
+            <a ng-href="/{{ post.id }}" class="btn btn-primary" role="button">Read More</a>
+        </div>
+    </div>
+</div>

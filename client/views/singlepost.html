@@ -1,0 +1,13 @@
+<div id="post-container">
+    <div class="blog-post">
+        <h3>{{ post.title }}</h3>
+        <h4>By {{ post.authorfirstname }} {{ post.authorlastname }}</h4>
+        <h4>{{ post.categoryname }}</h4>
+        <h4>{{ post.createdAt | date:'short' }}</h4>
+        <p>{{ post.content }}</p>
+    </div>
+    <div class="button-block">
+        <button class="fancy-button red" ng-click="deletePost()">Delete</button>
+        <button class="fancy-button" ng-click="goToUpdate()">Update</button>
+    </div>
+</div>

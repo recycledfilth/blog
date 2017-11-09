@@ -1,0 +1,11 @@
+<div id="post-container">
+        <form ng-submit="update()">
+            <input type="text" ng-model="post.title" placeholder="Enter title" />
+            <select ng-model="post.categoryid">
+                <option value="">Select a Category</option>
+                <option value="{{ c.id }}" ng-repeat="c in categories">{{ c.name }}</option>
+            </select>
+            <textarea ng-model="post.content" placeholder="Enter your post content here!" cols="30" rows="5"></textarea>
+            <button>Update</button>
+        </form>
+    </div>
